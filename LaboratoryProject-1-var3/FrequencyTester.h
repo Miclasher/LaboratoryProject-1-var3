@@ -14,6 +14,6 @@ private:
     void calculateStatistics();
 
     const SimulationData& m_data;
-    WeightedRandomGenerator m_generator;
+    std::unique_ptr<WeightedRandomGenerator> m_generator;
     SimulationResult m_result;
 };

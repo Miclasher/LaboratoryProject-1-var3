@@ -10,7 +10,7 @@ FrequencyTester::FrequencyTester(const SimulationData& data)
         throw std::invalid_argument("Test data cannot be empty");
     }
 
-    m_generator = WeightedRandomGenerator(data.numbers, data.given_frequencies);
+    m_generator = std::make_unique<WeightedRandomGenerator>(data.numbers, data.given_frequencies);
 }
 
 void FrequencyTester::run() {
