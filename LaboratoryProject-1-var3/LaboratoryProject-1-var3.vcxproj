@@ -126,11 +126,13 @@
     <ClCompile Include="FileUtil.cpp" />
     <ClCompile Include="FrequencyTester.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="ReportPrinter.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DataTypes.h" />
     <ClInclude Include="FileUtil.h" />
     <ClInclude Include="FrequencyTester.h" />
+    <ClInclude Include="ReportPrinter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
