@@ -27,14 +27,10 @@ SimulationData FileUtils::readData(const std::string& path) {
     if (!std::getline(file, line)) {
         throw std::runtime_error("Either file is empty or can't parse N");
     }
-    try {
-        data.N = std::stoull(line);
-        if (data.N == 0) {
-            throw std::invalid_argument("N must be positive integer");
-        }
-    }
-    catch (const std::exception& e) {
-        throw std::runtime_error("Invalid N value " + std::string(e.what()));
+    
+    data.N = std::stoull(line);
+    if (data.N == 0) {
+         throw std::invalid_argument("N must be positive integer");
     }
 
     if (!std::getline(file, line)) {
