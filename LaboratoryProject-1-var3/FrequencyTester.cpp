@@ -6,7 +6,7 @@
 
 FrequencyTester::FrequencyTester(const SimulationData& data)
     : m_data(data) {
-    if (data.numbers.empty() || data.frequencies.empty()) {
+    if (data.numbers.empty() || data.given_frequencies.empty()) {
         throw std::invalid_argument("Test data cannot be empty");
     }
 

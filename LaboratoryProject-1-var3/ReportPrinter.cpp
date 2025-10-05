@@ -11,9 +11,9 @@ void ReportPrinter::print(const SimulationData& data, const SimulationResult& re
 
     std::cout << "--- Simulation result ---\n";
     std::cout << std::left
-        << std::setw(10) << "Number"
-        << std::setw(15) << "Expected frequency"
-        << std::setw(15) << "Obtained frequency"
+        << std::setw(10) << "Number "
+        << std::setw(22) << "Expected frequency"
+        << std::setw(22) << "Obtained frequency"
         << std::setw(15) << "Count"
         << "\n";
     std::cout << std::string(55, '-') << "\n";
@@ -24,8 +24,8 @@ void ReportPrinter::print(const SimulationData& data, const SimulationResult& re
         double expected_freq = static_cast<double>(data.given_frequencies[i]) / total_given_freq;
         std::cout << std::left
             << std::setw(10) << data.numbers[i]
-            << std::setw(15) << expected_freq
-            << std::setw(15) << result.obtained_frequencies[i]
+            << std::setw(22) << expected_freq
+            << std::setw(22) << result.obtained_frequencies[i]
             << std::setw(15) << result.obtained_counts.at(data.numbers[i])
             << "\n";
     }
